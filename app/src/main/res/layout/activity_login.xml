@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="20dp"
+    tools:context=".LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:id="@+id/edt_layout"
+        android:paddingTop="50dp">
+
+       <include
+           layout="@layout/logo"/>
+
+        <TextView
+            style="@style/PrimaryText"
+            android:text="Логин"
+            android:layout_above="@+id/login"
+            android:layout_alignLeft="@+id/login"/>
+
+        <EditText
+            style="@style/PrimaryEditText"
+            android:hint="Логин"
+            android:id="@+id/login"
+            android:layout_above="@+id/txt_password"/>
+
+        <TextView
+            style="@style/PrimaryText"
+            android:text="Пароль"
+            android:layout_alignLeft="@+id/pass"
+            android:id="@+id/txt_password"
+            android:layout_above="@+id/pass"/>
+
+        <EditText
+            android:inputType="textPassword"
+            style="@style/PrimaryEditText"
+            android:hint="Пароль"
+            android:id="@+id/pass"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <Button
+        style="@style/AccentButton"
+        android:text="ВОЙТИ"
+        android:layout_below="@+id/edt_layout"
+        android:id="@+id/sing_btn" />
+
+    <TextView
+        android:id="@+id/txt_forget_password"
+        style="@style/PrimaryText"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/sing_btn"
+        android:paddingTop="20dp"
+        android:text="Забыли пароль?" />
+
+    <Button
+        style="@style/PrimaryButton"
+        android:text="Регистрация"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btn_go_to_registration"/>
+
+</RelativeLayout>

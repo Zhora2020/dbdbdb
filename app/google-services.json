@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "493192955040",
+    "firebase_url": "https://db-homework-b6826.firebaseio.com",
+    "project_id": "db-homework-b6826",
+    "storage_bucket": "db-homework-b6826.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:493192955040:android:0827ed9048f3f044",
+        "android_client_info": {
+          "package_name": "com.zhora.hw"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "493192955040-9sfmf0mkg8bnadl0ngmjbor5569s4tnn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zhora.hw",
+            "certificate_hash": "02020b90b1de5b816f21fa8b46b978aae6c78dbf"
+          }
+        },
+        {
+          "client_id": "493192955040-3lkidga6rtirp1a5fe93a6gu1tbskbe0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFVrtIiK2_WeOV0Dbn4-i-M9tYZWMHEjM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "493192955040-3lkidga6rtirp1a5fe93a6gu1tbskbe0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
