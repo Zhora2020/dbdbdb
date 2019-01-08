@@ -17,9 +17,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".ExitActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".PasswordRemindActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".MyGroupsActivity"></activity>
     </application>
 
 </manifest>

@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnExit;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

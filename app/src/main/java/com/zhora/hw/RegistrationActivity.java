@@ -28,6 +28,40 @@ public class RegistrationActivity extends AppCompatActivity {
     FirebaseAuth auth = FirebaseAuth.getInstance();
     FirebaseDatabase database = FirebaseDatabase.getInstance();
 
+    String deleteSpaces(String str) {
+        while (str.length() > 0 && str.substring(str.length() - 1).equals(" ")) {
+            str = str.substring(0, str.length() - 1);
+        }
+        return str;
+    }
+
+    boolean emptyMessage(String str,String message){
+        if (str.isEmpty()) {
+            Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
+            return true;
+        }
+        return false;
+    }
+
+    boolean check() {
+        String email = deleteSpaces(edtEmail.getText().toString());
+        String name = deleteSpaces(edtName.getText().toString());
+        String surname = deleteSpaces(edtSurname.getText().toString());
+        edtEmail.setText(email);
+        edtName.setText(name);
+        edtSurname.setText(surname);
+        if (emptyMessage(email, "Email не введен")) {
+            return false;
+        }
+        if (emptyMessage(name, "Имя не введено")) {
+            return false;
+        }
+        if (emptyMessage(surname, "Фамилия не введена")) {
+            return false;
+        }
+        return true;
+    }
+
     void registration(String email, String password){
         auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -35,7 +69,9 @@ public class RegistrationActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Toast.makeText(getApplicationContext(), "success", Toast.LENGTH_SHORT).show();
                             String uid = auth.getCurrentUser().getUid();
-                            database.getReference().child(uid).child("userInformation").setValue(new User(edtName.getText().toString(), edtSurname.getText().toString()));
+                            database.getReference().child(uid).child("userInformation")
+                                    .setValue(new User(edtName.getText().toString(),
+                                            edtSurname.getText().toString()));
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         } else {
                             Toast.makeText(getApplicationContext(), "error", Toast.LENGTH_SHORT).show();
@@ -87,14 +123,17 @@ public class RegistrationActivity extends AppCompatActivity {
                 }
             });*/
         }
+
         btnEndRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(edtNewPassword.getText().toString().equals(edtNewPasswordAgain.getText().toString())){
-                    registration(edtEmail.getText().toString(), edtNewPassword.getText().toString());
-                }
-                else {
-                    Toast.makeText(getApplicationContext(), "Пароли не совпадают", Toast.LENGTH_SHORT).show();
+
+                if (check() != false) {
+                    if (edtNewPassword.getText().toString().equals(edtNewPasswordAgain.getText().toString())) {
+                        registration(edtEmail.getText().toString(), edtNewPassword.getText().toString());
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Пароли не совпадают", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
