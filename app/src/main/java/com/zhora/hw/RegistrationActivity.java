@@ -128,7 +128,7 @@ public class RegistrationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (check() != false) {
+                if (check()) {
                     if (edtNewPassword.getText().toString().equals(edtNewPasswordAgain.getText().toString())) {
                         registration(edtEmail.getText().toString(), edtNewPassword.getText().toString());
                     } else {

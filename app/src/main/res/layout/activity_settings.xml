@@ -13,25 +13,25 @@
         <item
             android:id="@+id/action_settings"
             android:orderInCategory="100"
-            android:title="@string/action_settings"
+            android:title="@string/action_homework"
             app:showAsAction="never"/>
 
         <item
-            android:id="@+id/action_cat1"
+            android:id="@+id/action_add_homework"
             android:orderInCategory="100"
-            android:title="@string/action_cat_male"
+            android:title="@string/action_lessons"
             app:showAsAction="never"/>
 
         <item
-            android:id="@+id/action_cat2"
+            android:id="@+id/action_lessons"
             android:orderInCategory="100"
-            android:title="@string/action_cat_female"
+            android:title="@string/action_members"
             app:showAsAction="never"/>
 
         <item
-            android:id="@+id/action_cat3"
+            android:id="@+id/action_members"
             android:orderInCategory="100"
-            android:title="@string/action_kitten"
+            android:title="@string/action_add_file"
             app:showAsAction="never"/>
     </menu>
 

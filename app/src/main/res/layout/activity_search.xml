@@ -13,7 +13,7 @@
     <RelativeLayout
         android:paddingTop="55dp"
         android:layout_width="match_parent"
-        android:layout_height="80dp">
+        android:layout_height="105dp">
 
         <EditText
             android:layout_width="325dp"
